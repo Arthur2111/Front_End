@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+// css property so you can reuse them or change just this property to influence other parts of the selector
+:root{
+    --primary-colour: #2BAE66FF
+}
+
+
+// selectors can be 2 different things name of html element (body. div img etc) or class
+body {
+    //  inside curly brackets will be the property
+    paddingound: #f2f2f2;
+    // paddinggins represent the whitespace from the edge of the window... it represents the space outside the element
+    margin: 0;
+    font-family: 'Poppins';
+    
+}
+
+
+// "." represents class and what comes after is the name of the class
+.navbar {
+    background: white;
+    //padding represents space inside the element
+    padding: 1em; // em represents a type of unit "em" is a relative unit which is used for 
+
+    //sass allows nesting of rulse sets
+    .logo {
+        text-decoration: none; //removes underline on links
+        font-weight: bold;
+        color: black; 
+        font-size: 1.2em;
+
+        span {
+            color: var(--primary-colour);
+        }
+    }
+
+    
+    nav{
+    display: none;
+    }
+
+    .container {
+    display: flex; // flex = flexbox
+    place-content: space-between;
+    }
+
+    .mobile-menu{
+        cursor: pointer;
+    }
+}
+
+
+a {
+    color: #444444;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    padding: 5em 2em; // if you wanna specify specific padding sides it works clockwise but all 4 inputs (casue square) must be inserted ( 4em 2em 3em 2px).... if only 2 inputs it refers to (top bottom) & (left right)
+}
+
+.hero{
+    text-align: center;
+}
+
+.left-col{
+
+
+    .subhead{
+        text-transform: uppercase;
+        font-weight: bold;
+        color: gray;
+        letter-spacing:  .3em;
+    }
+    h1 {
+        font-size: 2.5em;
+        line-height: 1.3em;
+        margin-top: .2em;
+    }
+
+    .primary-cta {
+        background: var(--primary-colour);
+        color: white;
+        text-decoration: none;
+        padding: .6em 1.3em;
+        font-size: 1.4em;
+        border-radius: 5em; //becomes pill shaped
+        font-weight: bold;
+        display: inline-block;
+    }
+
+
+    .watch-video-cta {
+        display: block;
+        margin-top: 1em ;
+
+        img {
+            margin-right: .5em;
+        }
+    }
+
+
+}
+
+.hero-img {
+    width: 70%;
+    margin-top: 3em;
+}
+
+section.features-section{
+    background: #20272e;
+    color: white;
+
+}
+
+ul.features-list {
+    margin: 0;
+    padding-left: .1em;
+    // display: grid;
+
+    li {
+        font-size: 1.1em;
+        margin-bottom: 1em;
+        margin-left: 2em;
+        // padding-bottom: 1em;
+        // padding-left: 2em;
+        position: relative;
+
+        &:before{
+            content: '';
+            left: -2em;
+            position: absolute; //element with postition absolute to is to position element in document and use other values
+            width: 20px;
+            height: 20px;
+            background-image: url("../images/bullet.svg");
+            background-size: contain;
+            margin-right: .5em
+            ;
+        }
+
+    }
+
+}
+
+.features-section img{
+    display: none;
+}
+
+.testimonials-section {
+    background:  var(--primary-colour);
+    li{
+        background: #006bd6;
+
+        img {
+            width: 5em;
+            height: 5em;
+
+        }
+    }
+}   
